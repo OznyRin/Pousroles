@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuilkrrpbrwnx"]
+
+[ext_resource type="Script" uid="uid://wg4quv2yxw4m" path="res://Scripts/CreateAccountScreen.gd" id="1_fcdj7"]
+
+[node name="CreateAccount" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fcdj7")
+
+[node name="VBoxMain" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 175.0
+offset_right = 542.0
+offset_bottom = 390.0
+theme_override_constants/separation = 10
+
+[node name="Label_Title" type="Label" parent="VBoxMain"]
+layout_mode = 2
+text = "Créer un compte"
+
+[node name="LineEdit_Email" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+placeholder_text = "Adresse e-mail"
+
+[node name="LineEdit_Password" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+placeholder_text = "Mot de passe"
+
+[node name="LineEdit_Username" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+placeholder_text = "Pseudo"
+
+[node name="Button_Create" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Créer un compte"
+
+[node name="Button_Back" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Retour à l'écran de connexion"
+
+[node name="Label_Error" type="Label" parent="VBoxMain"]
+layout_mode = 2

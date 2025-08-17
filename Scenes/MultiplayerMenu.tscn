@@ -1,0 +1,167 @@
+[gd_scene load_steps=3 format=3 uid="uid://1wjvsw24g2dm"]
+
+[ext_resource type="Script" uid="uid://bv37xk1a2n8j6" path="res://Scripts/MultiplayerMenu.gd" id="1_l6mum"]
+[ext_resource type="PackedScene" uid="uid://coxvx7sh6axay" path="res://Scenes/VBoxFriends.tscn" id="2_aq5bb"]
+
+[node name="MultiplayerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00325, 1)
+script = ExtResource("1_l6mum")
+
+[node name="VBoxFriends" parent="." instance=ExtResource("2_aq5bb")]
+layout_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 486.0
+offset_top = 251.0
+offset_right = 665.0
+offset_bottom = 397.0
+theme_override_constants/separation = 10
+
+[node name="Label_Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Bienvenue <pseudo>"
+
+[node name="Button_CreateTable" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Créer une table"
+
+[node name="TableListContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/TableListContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox_TablesArea" type="VBoxContainer" parent="VBoxContainer/TableListContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="VBox_TableList" type="VBoxContainer" parent="VBoxContainer/TableListContainer/ScrollContainer/VBox_TablesArea"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Label_JoinedTables" type="Label" parent="VBoxContainer/TableListContainer/ScrollContainer/VBox_TablesArea"]
+layout_mode = 2
+text = "Tables rejointes"
+
+[node name="VBox_JoinedTables" type="VBoxContainer" parent="VBoxContainer/TableListContainer/ScrollContainer/VBox_TablesArea"]
+layout_mode = 2
+
+[node name="Label_InvitedTables" type="Label" parent="VBoxContainer/TableListContainer/ScrollContainer/VBox_TablesArea"]
+layout_mode = 2
+text = "Tables invitées"
+
+[node name="VBox_InvitedTables" type="VBoxContainer" parent="VBoxContainer/TableListContainer/ScrollContainer/VBox_TablesArea"]
+layout_mode = 2
+
+[node name="Label_Info" type="Label" parent="VBoxContainer/TableListContainer"]
+layout_mode = 2
+
+[node name="Button_Refresh" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Rafraichir"
+
+[node name="Button_Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Retour"
+
+[node name="PopupPanel_Rename" type="Popup" parent="."]
+position = Vector2i(485, 134)
+size = Vector2i(202, 85)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupPanel_Rename"]
+offset_left = 9.03421
+offset_top = 24.0
+offset_right = 203.034
+offset_bottom = 116.0
+theme_override_constants/separation = 30
+
+[node name="Button_CancelRename" type="Button" parent="PopupPanel_Rename/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Annuler"
+flat = true
+
+[node name="Button_ConfirmRename" type="Button" parent="PopupPanel_Rename/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Valider"
+flat = true
+
+[node name="LineEdit_Rename" type="LineEdit" parent="PopupPanel_Rename"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0276
+offset_top = -15.5
+offset_right = 34.5349
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.997987, 1)
+flat = true
+
+[node name="Label" type="Label" parent="PopupPanel_Rename"]
+offset_left = 4.01521
+offset_top = 4.0
+offset_right = 198.015
+offset_bottom = 96.0
+text = "Nouveau nom de la table"
+
+[node name="PopupPanel_DeleteConfirm" type="Popup" parent="."]
+auto_translate_mode = 1
+position = Vector2i(411, 21)
+size = Vector2i(328, 100)
+
+[node name="Label" type="Label" parent="PopupPanel_DeleteConfirm"]
+offset_left = 11.0
+offset_top = 4.0
+offset_right = 328.0
+offset_bottom = 96.0
+text = "Confirmer la suppression de cette table ?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupPanel_DeleteConfirm"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.5
+offset_top = -15.5
+offset_right = 80.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Button_CancelDelete" type="Button" parent="PopupPanel_DeleteConfirm/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Non"
+flat = true
+
+[node name="Button_ConfirmDelete" type="Button" parent="PopupPanel_DeleteConfirm/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Supprimer"
+flat = true
+
+[connection signal="pressed" from="PopupPanel_Rename/HBoxContainer/Button_CancelRename" to="PopupPanel_Rename" method="hide"]
+[connection signal="pressed" from="PopupPanel_Rename/HBoxContainer/Button_ConfirmRename" to="." method="_on_rename_confirmed"]
+[connection signal="pressed" from="PopupPanel_DeleteConfirm/HBoxContainer/Button_CancelDelete" to="." method="_on_delete_confirmed"]
+[connection signal="pressed" from="PopupPanel_DeleteConfirm/HBoxContainer/Button_ConfirmDelete" to="PopupPanel_DeleteConfirm" method="hide"]

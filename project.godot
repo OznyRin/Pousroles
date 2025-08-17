@@ -1,0 +1,24 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Pousroles"
+run/main_scene="uid://b5o1wsg8mcbqa"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+NetworkManager="*res://Scripts/NetworkManager.gd"
+TableManager="*res://Scripts/TableManager.gd"
+AccountManager="*res://Scripts/AccountManager.gd"
+Global="*res://Scripts/Global.gd"
+CharacterManager="*res://Scripts/CharacterManager.gd"

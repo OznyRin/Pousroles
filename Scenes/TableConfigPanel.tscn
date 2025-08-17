@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ddc65l1iu3gao"]
+
+[node name="VBox_Main" type="VBoxContainer"]
+offset_left = 500.0
+offset_top = 150.0
+offset_right = 708.0
+offset_bottom = 509.0
+
+[node name="Label_Title" type="Label" parent="."]
+layout_mode = 2
+
+[node name="HBox_Invite" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label_Invite" type="Label" parent="HBox_Invite"]
+layout_mode = 2
+text = "Inviter un ami"
+
+[node name="OptionButton_InviteList" type="OptionButton" parent="HBox_Invite"]
+layout_mode = 2
+
+[node name="Button_Invite" type="Button" parent="HBox_Invite"]
+layout_mode = 2
+text = "Inviter"
+
+[node name="Label_Invited" type="Label" parent="."]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="VBox_InvitedPlayers" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Button_EnterTable" type="Button" parent="."]
+layout_mode = 2
+text = "Entrer dans la table"
+
+[node name="Button_Back" type="Button" parent="."]
+layout_mode = 2
+text = "Retour"

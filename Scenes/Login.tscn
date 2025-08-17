@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5o1wsg8mcbqa"]
+
+[ext_resource type="Script" uid="uid://6wi1wndxixyh" path="res://Scripts/LoginScreen.gd" id="1_leum0"]
+[ext_resource type="Script" uid="uid://c662d8kbrogn5" path="res://Scripts/NetworkManager.gd" id="2_767d8"]
+[ext_resource type="Script" uid="uid://brwecrmdnfw3p" path="res://Scripts/AccountManager.gd" id="3_xklxs"]
+
+[node name="Login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_leum0")
+
+[node name="NetworkManager" type="Node" parent="."]
+script = ExtResource("2_767d8")
+
+[node name="VBoxMain" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 507.0
+offset_top = 214.0
+offset_right = 645.0
+offset_bottom = 434.0
+theme_override_constants/separation = 10
+
+[node name="Label_Title" type="Label" parent="VBoxMain"]
+layout_mode = 2
+text = "Connexion / Inscription"
+
+[node name="LineEdit_Email" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+placeholder_text = "Adresse e-mail"
+
+[node name="LineEdit_Password" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+placeholder_text = "Mot de passe"
+secret = true
+
+[node name="Button_Login" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Continuer"
+
+[node name="Button_CreateAccount" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Créer un compte"
+
+[node name="Label_Error" type="Label" parent="VBoxMain"]
+layout_mode = 2
+
+[node name="AccountManager" type="Node" parent="."]
+script = ExtResource("3_xklxs")
+
+[connection signal="pressed" from="VBoxMain/Button_Login" to="." method="_on_button_login_pressed"]

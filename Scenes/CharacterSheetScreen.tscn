@@ -1,0 +1,969 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyaaxwln05pim"]
+
+[ext_resource type="Script" uid="uid://6lrme6x8er8u" path="res://Scripts/CharacterSheetScreen.gd" id="1_8u2g3"]
+
+[node name="CharacterSheetScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8u2g3")
+
+[node name="HBox_Main" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel_Left" type="VBoxContainer" parent="HBox_Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.15
+theme_override_constants/separation = 13
+
+[node name="TextureRect_Avatar" type="TextureRect" parent="HBox_Main/Panel_Left"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Button_Color" type="Button" parent="HBox_Main/Panel_Left"]
+layout_mode = 2
+
+[node name="Label_Title" type="Label" parent="HBox_Main/Panel_Left"]
+layout_mode = 2
+
+[node name="LineEdit_Name" type="LineEdit" parent="HBox_Main/Panel_Left"]
+layout_mode = 2
+
+[node name="LineEdit_Age" type="LineEdit" parent="HBox_Main/Panel_Left"]
+layout_mode = 2
+
+[node name="TextEdit_Description" type="TextEdit" parent="HBox_Main/Panel_Left"]
+layout_mode = 2
+
+[node name="TabContainer_Main" type="TabContainer" parent="HBox_Main"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_font_sizes/font_size = 14
+current_tab = 0
+
+[node name="Tab_Caracteristiques" type="Panel" parent="HBox_Main/TabContainer_Main"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="HBoxCara" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Title" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBoxCara"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "CARACTERISTIQUES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridCara" type="GridContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 0
+columns = 6
+
+[node name="FOR" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/FOR"]
+layout_mode = 2
+text = "FOR"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/FOR"]
+layout_mode = 2
+max_value = 20.0
+alignment = 1
+
+[node name="DEX" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/DEX"]
+layout_mode = 2
+text = "DEX"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/DEX"]
+layout_mode = 2
+max_value = 20.0
+alignment = 1
+
+[node name="END" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/END"]
+layout_mode = 2
+text = "END"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/END"]
+layout_mode = 2
+max_value = 20.0
+alignment = 1
+
+[node name="INT" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/INT"]
+layout_mode = 2
+text = "INT"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/INT"]
+layout_mode = 2
+max_value = 20.0
+alignment = 1
+
+[node name="CHA" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/CHA"]
+layout_mode = 2
+text = "CHA"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/GridCara/CHA"]
+layout_mode = 2
+max_value = 20.0
+alignment = 1
+
+[node name="VBoxVivre" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_Title" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/VBoxVivre"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "VIVRE OU MOURIR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBox" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="VBox_PV" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox/VBox_PV"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "PV"
+horizontal_alignment = 1
+
+[node name="PV" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox/VBox_PV"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBox_Blessures" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox/VBox_Blessures"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Blessures"
+
+[node name="Blessures" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox/VBox_Blessures"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBox_Protection" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox/VBox_Protection"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Protection"
+
+[node name="Protection" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/HBox/VBox_Protection"]
+layout_mode = 2
+alignment = 1
+
+[node name="Liste Armes2" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes2"]
+layout_mode = 2
+text = "ARME"
+
+[node name="LineEdit" type="LineEdit" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes2"]
+layout_mode = 2
+placeholder_text = "Nom de l'arme"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes2"]
+layout_mode = 2
+
+[node name="Button_Dice" type="Button" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes2"]
+layout_mode = 2
+
+[node name="Liste Armes" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes"]
+layout_mode = 2
+text = "ARME"
+
+[node name="LineEdit" type="LineEdit" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes"]
+layout_mode = 2
+placeholder_text = "Nom de l'arme"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes"]
+layout_mode = 2
+
+[node name="Button_Dice" type="Button" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes"]
+layout_mode = 2
+
+[node name="Liste Armes3" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes3"]
+layout_mode = 2
+text = "ARME"
+
+[node name="LineEdit" type="LineEdit" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes3"]
+layout_mode = 2
+placeholder_text = "Nom de l'arme"
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes3"]
+layout_mode = 2
+
+[node name="Button_Dice" type="Button" parent="HBox_Main/TabContainer_Main/Tab_Caracteristiques/VBoxContainer/Liste Armes3"]
+layout_mode = 2
+
+[node name="Tab_Competences" type="Panel" parent="HBox_Main/TabContainer_Main"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 143
+theme_override_constants/v_separation = 6
+columns = 3
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "COMPÉTENCES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "SCORE"
+
+[node name="Label3" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "BONUS / MALUS"
+
+[node name="VBoxComp" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "ARTISANAT, CONSTRUIRE"
+
+[node name="HBoxScore" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM"]
+layout_mode = 2
+
+[node name="VBoxComp2" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp2"]
+layout_mode = 2
+text = "COMBAT RAPPROCHÉ"
+
+[node name="HBoxScore2" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore2"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM2" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM2"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM2"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM2"]
+layout_mode = 2
+
+[node name="VBoxComp3" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp3"]
+layout_mode = 2
+text = "COMBAT À DISTANCE"
+
+[node name="HBoxScore3" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore3"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM3" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM3"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM3"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM3"]
+layout_mode = 2
+
+[node name="VBoxComp4" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp4"]
+layout_mode = 2
+text = "CONNAISSANCE DE LA NATURE"
+
+[node name="HBoxScore4" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore4"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore4"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM4" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM4"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM4"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM4"]
+layout_mode = 2
+
+[node name="VBoxComp5" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp5"]
+layout_mode = 2
+text = "CONNAISSANCE DES SECRETS"
+
+[node name="HBoxScore5" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore5"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM5" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM5"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM5"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM5"]
+layout_mode = 2
+
+[node name="VBoxComp6" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp6"]
+layout_mode = 2
+text = "COURIR, SAUTER"
+
+[node name="HBoxScore6" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore6"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore6"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM6" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM6"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM6"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM6"]
+layout_mode = 2
+
+[node name="VBoxComp7" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp7"]
+layout_mode = 2
+text = "DISCRÉTION"
+
+[node name="HBoxScore7" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore7"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore7"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM7" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM7"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM7"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM7"]
+layout_mode = 2
+
+[node name="VBoxComp8" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp8"]
+layout_mode = 2
+text = "DROIT"
+
+[node name="HBoxScore8" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore8"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore8"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM8" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM8"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM8"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM8"]
+layout_mode = 2
+
+[node name="VBoxComp9" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp9"]
+layout_mode = 2
+text = "ESQUIVER"
+
+[node name="HBoxScore9" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore9"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore9"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM9" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM9"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM9"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM9"]
+layout_mode = 2
+
+[node name="VBoxComp10" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp10"]
+layout_mode = 2
+text = "INTIMIDER"
+
+[node name="HBoxScore10" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore10"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore10"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM10" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM10"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM10"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM10"]
+layout_mode = 2
+
+[node name="VBoxComp11" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp11"]
+layout_mode = 2
+text = "LIRE, ÉCRIRE"
+
+[node name="HBoxScore11" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore11"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore11"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM11" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM11"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM11"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM11"]
+layout_mode = 2
+
+[node name="VBoxComp12" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp12"]
+layout_mode = 2
+text = "MENTIR, CONVAINCRE"
+
+[node name="HBoxScore12" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore12"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore12"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM12" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM12"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM12"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM12"]
+layout_mode = 2
+
+[node name="VBoxComp13" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp13"]
+layout_mode = 2
+text = "PERCEPTION"
+
+[node name="HBoxScore13" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore13"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore13"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM13" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM13"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM13"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM13"]
+layout_mode = 2
+
+[node name="VBoxComp14" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp14"]
+layout_mode = 2
+text = "PILOTER"
+
+[node name="HBoxScore14" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore14"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore14"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM14" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM14"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM14"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM14"]
+layout_mode = 2
+
+[node name="VBoxComp15" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp15"]
+layout_mode = 2
+text = "PSYCHOLOGIE"
+
+[node name="HBoxScore15" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore15"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore15"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM15" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM15"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM15"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM15"]
+layout_mode = 2
+
+[node name="VBoxComp16" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp16"]
+layout_mode = 2
+text = "RÉFLEXES"
+
+[node name="HBoxScore16" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore16"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore16"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM16" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM16"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM16"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM16"]
+layout_mode = 2
+
+[node name="VBoxComp17" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp17"]
+layout_mode = 2
+text = "SERRURES ET PIÈGES"
+
+[node name="HBoxScore17" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore17"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore17"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM17" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM17"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM17"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM17"]
+layout_mode = 2
+
+[node name="VBoxComp18" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp18"]
+layout_mode = 2
+text = "SOIGNER"
+
+[node name="HBoxScore18" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore18"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore18"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM18" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM18"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM18"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM18"]
+layout_mode = 2
+
+[node name="VBoxComp19" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp19"]
+layout_mode = 2
+text = "SURVIE"
+
+[node name="HBoxScore19" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore19"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore19"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM19" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM19"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM19"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM19"]
+layout_mode = 2
+
+[node name="VBoxComp20" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/VBoxComp20"]
+layout_mode = 2
+text = "VOLER"
+
+[node name="HBoxScore20" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore20"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxScore20"]
+layout_mode = 2
+text = "%"
+
+[node name="HBoxBM20" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM20"]
+layout_mode = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM20"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBox_Main/TabContainer_Main/Tab_Competences/VBoxContainer/ScrollContainer/GridContainer/HBoxBM20"]
+layout_mode = 2
+
+[node name="Tab_CompetencesSpeciales" type="Panel" parent="HBox_Main/TabContainer_Main"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBoxList" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_CompetencesSpeciales"]
+layout_mode = 1
+
+[node name="Button_Add" type="Button" parent="HBox_Main/TabContainer_Main/Tab_CompetencesSpeciales"]
+layout_mode = 2
+offset_top = 4.0
+offset_right = 232.0
+offset_bottom = 35.0
+text = "Ajouter compétence spéciale"
+
+[node name="Tab_Magies" type="Panel" parent="HBox_Main/TabContainer_Main"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="HBox_Main/TabContainer_Main/Tab_Magies"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 23.0
+text = "Magies"
+
+[node name="Tab_Inventaire" type="Panel" parent="HBox_Main/TabContainer_Main"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="HBox" type="HBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Inventaire"]
+layout_mode = 2
+offset_right = 68.0
+
+[node name="VBox" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Inventaire/HBox"]
+layout_mode = 2
+
+[node name="VBox_InventaireListe" type="VBoxContainer" parent="HBox_Main/TabContainer_Main/Tab_Inventaire"]
+layout_mode = 2
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 12.0
+
+[node name="Button_Add_Item" type="Button" parent="HBox_Main/TabContainer_Main/Tab_Inventaire/VBox_InventaireListe"]
+layout_mode = 2
+
+[node name="Tab_Notes" type="Panel" parent="HBox_Main/TabContainer_Main"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="TextEdit" type="TextEdit" parent="HBox_Main/TabContainer_Main/Tab_Notes"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 8.0
+
+[node name="Button_Save" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 72.0
+offset_right = 80.0
+offset_bottom = 318.0
+
+[node name="Button_Back" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 84.0
+offset_right = 92.0
+offset_bottom = 318.0

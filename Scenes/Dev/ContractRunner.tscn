@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://duyx3an2awuog"]
+
+[ext_resource type="Script" uid="uid://cxtuihmq2enkn" path="res://Scenes/Dev/ContractCheck.gd" id="1_u5214"]
+
+[node name="ContractRunner" type="Node"]
+script = ExtResource("1_u5214")

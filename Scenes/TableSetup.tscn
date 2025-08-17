@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://djln0a8dtb7tj"]
+
+[ext_resource type="Script" uid="uid://ctc44akkmk4gq" path="res://Scripts/TableSetupScreen.gd" id="1_rhhqh"]
+[ext_resource type="PackedScene" uid="uid://ddc65l1iu3gao" path="res://Scenes/TableConfigPanel.tscn" id="2_pma1n"]
+
+[node name="TableSetup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rhhqh")
+
+[node name="VBox_Main" parent="." instance=ExtResource("2_pma1n")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 208.0
+offset_bottom = 359.0

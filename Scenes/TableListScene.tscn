@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://n44f26aayg6r"]
+
+[ext_resource type="Script" uid="uid://h2hnej832ivy" path="res://Scripts/TableManager.gd" id="2_cinaa"]
+
+[node name="TableListScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TableManager" type="Node" parent="."]
+script = ExtResource("2_cinaa")
+
+[node name="VBoxMain" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxMain"]
+layout_mode = 2
+text = "Mes tables de Jeux"
+
+[node name="LineEdit_TableName" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+text = "Nom de la nouvelle table"
+
+[node name="Button_CreateTable" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Créer une table"
+
+[node name="LineEdit_TableCode" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+text = "Code UUID pour rejoindre une table"
+
+[node name="Button_JoinTable" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Rejoindre une table"
+
+[node name="LineEdit_JoinCode" type="LineEdit" parent="VBoxMain"]
+layout_mode = 2
+placeholder_text = "Code de la table"
+
+[node name="Button_JoinCode" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Rejoindre la table multijoueur"

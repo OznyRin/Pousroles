@@ -1,0 +1,14 @@
+# Godot 4
+.godot/
+.import/
+export/
+.mono/
+mono/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.log

@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://5sque13lefh"]
+
+[ext_resource type="Script" uid="uid://df5j5b28h4yk1" path="res://Scripts/TableRoomScreen.gd" id="1_b740b"]
+[ext_resource type="PackedScene" uid="uid://ddc65l1iu3gao" path="res://Scenes/TableConfigPanel.tscn" id="2_vfwe7"]
+
+[node name="TableRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b740b")
+
+[node name="VBoxMain" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 343.0
+offset_bottom = 649.0
+scale = Vector2(1.00206, 0.997383)
+
+[node name="Label_TableName" type="Label" parent="VBoxMain"]
+layout_mode = 2
+text = "Salle de jeu"
+
+[node name="Label_Players" type="Label" parent="VBoxMain"]
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="VBoxMain"]
+
+[node name="VBox_Main" parent="." instance=ExtResource("2_vfwe7")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 208.0
+offset_bottom = 359.0

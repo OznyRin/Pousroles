@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://w4cswunu7umu"]
+
+[ext_resource type="Script" uid="uid://ctdmk11wx67lh" path="res://Scripts/TableGame.gd" id="1_71dbi"]
+
+[node name="TableGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_71dbi")
+
+[node name="VBoxMain" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 236.0
+offset_bottom = 58.0
+
+[node name="Label_Title" type="Label" parent="VBoxMain"]
+layout_mode = 2
+text = "Bienvenue dans la table de jeu"
+
+[node name="Button_Back" type="Button" parent="VBoxMain"]
+layout_mode = 2
+text = "Retour"
+
+[node name="ChatScroll" type="ScrollContainer" parent="VBoxMain"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+
+[node name="ChatBox" type="VBoxContainer" parent="VBoxMain/ChatScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxChat" type="HBoxContainer" parent="VBoxMain"]
+layout_mode = 2
+
+[node name="LineEdit_ChatInput" type="LineEdit" parent="VBoxMain/HBoxChat"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Votre message ..."
+
+[node name="Button_Send" type="Button" parent="VBoxMain/HBoxChat"]
+layout_mode = 2
+text = "Envoyer"
