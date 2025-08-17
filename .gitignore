@@ -4,7 +4,7 @@
 export/
 .mono/
 mono/
-
+build/
 # OS
 .DS_Store
 Thumbs.db
@@ -12,3 +12,4 @@ Thumbs.db
 # Temp
 *.tmp
 *.log
+
